@@ -1,2 +1,4 @@
 %{"elixir_make": {:hex, :elixir_make, "0.4.0", "992f38fabe705bb45821a728f20914c554b276838433349d4f2341f7a687cddf", [], [], "hexpm"},
-  "mix_erlang_tasks": {:hex, :mix_erlang_tasks, "0.1.0", "36819fec60b80689eb1380938675af215565a89320a9e29c72c70d97512e4649", [], [], "hexpm"}}
+  "eunit_formatters": {:hex, :eunit_formatters, "0.3.1", "7a6fc351eb5b873e2356b8852eb751e20c13a72fbca03393cf682b8483509573", [], [], "hexpm"},
+  "mix_erlang_tasks": {:hex, :mix_erlang_tasks, "0.1.0", "36819fec60b80689eb1380938675af215565a89320a9e29c72c70d97512e4649", [], [], "hexpm"},
+  "mix_eunit": {:hex, :mix_eunit, "0.3.0", "0e3e23bbc1f428663ba6c0ce52731ea7bff381fcde1ea9198a1bd83ac26305b2", [], [{:eunit_formatters, "~> 0.3.1", [hex: :eunit_formatters, repo: "hexpm", optional: false]}], "hexpm"}}

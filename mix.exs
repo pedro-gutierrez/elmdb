@@ -39,7 +39,8 @@ defmodule Exmdb.Mixfile do
   defp deps do
     [
       {:elixir_make, "~> 0.4", runtime: false},
-      {:mix_erlang_tasks, "0.1.0"},
+      # {:mix_erlang_tasks, "0.1.0"},
+      {:mix_eunit, "~> 0.2"},
     ]
   end
 
