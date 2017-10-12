@@ -1,4 +1,4 @@
-defmodule ExMDB.Mixfile do
+defmodule Exmdb.Mixfile do
   use Mix.Project
 
   def project do
@@ -7,18 +7,24 @@ defmodule ExMDB.Mixfile do
       version: "0.0.1",
       elixir: "~> 1.5",
       elixirc_paths: elixirc_paths(Mix.env),
-      compilers: [:elixir_make] ++ Mix.compilers,
+      compilers: [:erlang, :elixir_make] ++ Mix.compilers,
       start_permanent: Mix.env == :prod,
+      erlc_options: [{:parse_transform, :lager_transform}],
       deps: deps()
     ]
   end
+
+  defp description() do
+    "Elixir extended EMDB, a wrapper around LMDB. "
+  end
+
 
   # Configuration for the OTP application.
   #
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {ExMDB.Application, []},
+      mod: {Exmdb.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
@@ -32,7 +38,19 @@ defmodule ExMDB.Mixfile do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:elixir_make, "~> 0.4", runtime: false}
+      {:elixir_make, "~> 0.4", runtime: false},
+      {:mix_erlang_tasks, "0.1.0"},
+    ]
+  end
+
+  defp package() do
+    [
+      files: [
+        "lib", "priv", "mix.exs", "README*", "LICENSE*", "src", "c_src"
+      ],
+      maintainers: ["Jaremy Creechley"],
+      licenses: ["OpenLDAP License"],
+      links: %{"GitHub" => "https://github.com/elcritch/exmdb"}
     ]
   end
 
