@@ -9,7 +9,6 @@ defmodule ExMDB.Mixfile do
       elixirc_paths: elixirc_paths(Mix.env),
       compilers: [:elixir_make] ++ Mix.compilers,
       start_permanent: Mix.env == :prod,
-      aliases: aliases(),
       deps: deps()
     ]
   end

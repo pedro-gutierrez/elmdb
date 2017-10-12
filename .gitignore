@@ -5,3 +5,5 @@ rebar.lock
 c_src/*.o
 c_src/*.d
 *~
+/deps/
+
