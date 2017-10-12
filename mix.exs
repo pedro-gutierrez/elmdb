@@ -9,7 +9,7 @@ defmodule Exmdb.Mixfile do
       elixirc_paths: elixirc_paths(Mix.env),
       compilers: [:erlang, :elixir_make] ++ Mix.compilers,
       start_permanent: Mix.env == :prod,
-      erlc_options: [{:parse_transform, :lager_transform}],
+      erlc_options: [{:parse_transform}],
       deps: deps()
     ]
   end
