@@ -105,7 +105,7 @@
 %%====================================================================
 %% MACROS
 %%====================================================================
--define(ELMDB_DRIVER_NAME, "exmdb").
+-define(ELMDB_DRIVER_NAME, "elmdb").
 -define(NOT_LOADED, not_loaded(?LINE)).
 -define (TIMEOUT, 5000).
 
